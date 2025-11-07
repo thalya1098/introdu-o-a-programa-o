@@ -1,0 +1,19 @@
+#include <stdio.h>
+// Algoritmo de temperatura-Thalya
+
+int main() {
+    float temperatura;
+
+    printf("Informe a temperatura corporal (em °C): ");
+    scanf("%f", &temperatura);
+
+    if (temperatura > 37.5) {
+        printf("Voce esta com febre! Tome um banho de rio e procure o posto de saude.\n");
+    } else if (temperatura >= 36.0 && temperatura <= 37.5) {
+        printf("Tudo certo! Continue tomando seu cha de jambu!\n");
+    } else {
+        printf("Temperatura baixa! Vista sua camisa de malha e va comer um Xcaboquinho!\n");
+    }
+
+    return 0;
+}
