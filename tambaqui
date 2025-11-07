@@ -1,0 +1,21 @@
+#include <stdio.h>
+//Algoritmo de tambaqui-THALYA
+
+
+int main() {
+int tambaqui, farinha;
+printf("Escolheu tambaqui? (1=sim 0=não): ");
+scanf("%d", &tambaqui);
+printf("Escolheu farinha do Uarini? (1=sim 0=não): ");
+scanf("%d", &farinha);
+
+
+if (tambaqui == 1 && farinha == 1) {
+printf("Prato perfeito! Bom apetite com tambaqui e farinha do Uarini!\n");
+} else {
+printf("Tá faltando coisa boa aí! Volte e monte seu prato completo.\n");
+}
+
+
+return 0;
+}
