@@ -1,0 +1,21 @@
+#include <stdio.h>
+//Algoritmo de tapioca de feira-Thalya
+
+int main() {
+    int dia;
+
+    printf("Informe o dia da semana (1 = segunda, 2 = terça, 3 = quarta, 4 = quinta, 5 = sexta, 6 = sabado, 7 = domingo): ");
+    scanf("%d", &dia);
+
+    if (dia == 1 || dia == 3 || dia == 5) {
+        printf("Hoje temos tapioquinha de tucuma com queijo!\n");
+    } else if (dia == 2 || dia == 4) {
+        printf("Hoje o destaque e tapioquinha com banana frita e leite condensado!\n");
+    } else if (dia == 6 || dia == 7) {
+        printf("E dia de tapioquinha mista com tudo dentro!\n");
+    } else {
+        printf("Dia invalido! Informe um numero de 1 a 7.\n");
+    }
+
+    return 0;
+}
