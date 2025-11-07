@@ -1,0 +1,47 @@
+#include <stdio.h>
+//Algoritmo de tacacá-Thalya
+
+
+int main() {
+    int porcoes;
+    int dividir;
+    char fidelidade;
+    
+    printf("Quantas porcoes de tacaca vai querer? ");
+    scanf("%d", &porcoes);
+
+    printf("Vai dividir com outra pessoa? (1 = sim, 0 = nao): ");
+    scanf("%d", &dividir);
+
+    printf("Cliente fidelidade? (s/n): ");
+    scanf(" %c", &fidelidade);
+
+    // Cálculos básicos
+    int tucupi = 1 * porcoes;
+    int jambu = 2 * porcoes;
+    int camarao = 3 * porcoes;
+    float valor_total = 12.0 * porcoes;
+
+    // Se for pra dividir entre duas pessoas
+    if (dividir == 1) {
+        valor_total = valor_total / 2;
+    }
+
+    // Se for cliente fidelidade, aplica desconto de R$5
+    if (fidelidade == 's' || fidelidade == 'S') {
+        valor_total = valor_total - 5.0;
+        if (valor_total < 0) { // Evita valor negativo
+            valor_total = 0;
+        }
+    }
+
+    // Exibição dos resultados
+    printf("\n--- RESUMO DO PEDIDO ---\n");
+    printf("Porcoes: %d\n", porcoes);
+    printf("Tucupi (conchas): %d\n", tucupi);
+    printf("Jambu (folhas): %d\n", jambu);
+    printf("Camarao seco: %d\n", camarao);
+    printf("Valor total a pagar: R$ %.2f\n", valor_total);
+
+    return 0;
+}
